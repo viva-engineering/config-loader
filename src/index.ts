@@ -4,7 +4,7 @@ export { EnvFileSource, EnvFileParams } from './sources/env-file';
 export { AwsParameterStoreSource, AwsParameterStoreParameters } from './sources/aws-parameter-store';
 
 import { bool, number, string } from './cast';
-import { lowercase, uppercase } from './transform';
+import { lowercase, uppercase, lastSegment } from './transform';
 import { ConfigSource, ConfigSourceParams, Params } from './sources/source';
 
 export interface LoadOptions<T> {
@@ -57,5 +57,6 @@ export const cast = {
  */
 export const transform = {
 	lowercase,
-	uppercase
+	uppercase,
+	lastSegment
 };
