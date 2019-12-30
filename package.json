@@ -1,0 +1,29 @@
+{
+  "name": "@viva-eng/config-loader",
+  "version": "1.0.0",
+  "description": "A utility for loading configuration from various sources",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc --build tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viva-engineering/config-loader.git"
+  },
+  "keywords": [
+    "config"
+  ],
+  "author": "James Brumond <james@jbrumond.me> (http://www.jbrumond.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viva-engineering/config-loader/issues"
+  },
+  "homepage": "https://github.com/viva-engineering/config-loader#readme",
+  "dependencies": {
+    "@types/node": "^11.11.4",
+    "aws-sdk": "^2.596.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.0"
+  }
+}
