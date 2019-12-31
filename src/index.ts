@@ -33,7 +33,7 @@ export const loadConfiguration = async <T extends object>(options: LoadOptions<T
 			const keys = Object.keys(params);
 
 			for (let k = 0; k < keys.length; k++) {
-				const key = keys[i];
+				const key = keys[k];
 				const finalKey = options.transformKeys ? options.transformKeys(key) : key;
 
 				if (! result[finalKey]) {
