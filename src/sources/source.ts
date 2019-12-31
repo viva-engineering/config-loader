@@ -15,7 +15,7 @@ export abstract class ConfigSource {
 		this.failOnMissing = params.failOnMissing;
 	}
 
-	public abstract load() : Promise<Params>;
+	public abstract load() : Promise<Params[]>;
 
 	/**
 	 * If `failOnMissing` is enabled, this function does nothing (allowing errors to throw as normal).

@@ -26,15 +26,19 @@ export const loadConfiguration = async <T extends object>(options: LoadOptions<T
 	const loaded = await Promise.all(options.sources.map((source) => source.load()));
 
 	for (let i = 0; i < loaded.length; i++) {
-		const params = loaded[i];
-		const keys = Object.keys(params);
+		const source = loaded[i];
 
-		for (let j = 0; j < keys.length; j++) {
-			const key = keys[i];
-			const finalKey = options.transformKeys ? options.transformKeys(key) : key;
+		for (let j = 0; j < source.length; j++) {
+			const params = source[j];
+			const keys = Object.keys(params);
 
-			if (! result[finalKey]) {
-				result[finalKey] = params[key];
+			for (let k = 0; k < keys.length; k++) {
+				const key = keys[i];
+				const finalKey = options.transformKeys ? options.transformKeys(key) : key;
+
+				if (! result[finalKey]) {
+					result[finalKey] = params[key];
+				}
 			}
 		}
 	}
